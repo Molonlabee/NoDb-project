@@ -18,12 +18,14 @@ class App extends Component {
   render() {
     let { currentView } = this.state;
     return (
-      <div className='pop'>
+
+      <section>
         <Header/>
         <Main />
         <Sidebar />
         <Footer />
-      </div>
+        <button>click</button>
+      </section>
     );
   }
 }
