@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import "./Sidebar.css";
-import VocabularyList from "./VocabularyList";
+
 import "./Sidebar";
 
 class Sidebar extends Component {
@@ -8,7 +7,7 @@ class Sidebar extends Component {
         super();
 
         this.state = {
-            Words: [],
+            words: [],
             input: ""
         };
         this.handleAddTask = this.handleAddTask.bind(this);
@@ -20,14 +19,14 @@ class Sidebar extends Component {
 
     handleAddTask() {
         this.setState ({
-            Words: [...this.state.Words, this.state.input],
+            words: [...this.state.words, this.state.input],
             input: ""
         });
     }
 
     render() {
-        let Words = this.state.Words.map((element,index) => {
-            return <VocabularyList key ={index} task={element} />
+        let words = this.state.words.map((element,index) => {
+            return <words key ={index} task={element} />
         })
         return (
             <div className="Sidebar">
@@ -45,7 +44,7 @@ class Sidebar extends Component {
 
                 <br />
 
-                {Words}
+                {words}
             </div>
         );
     }

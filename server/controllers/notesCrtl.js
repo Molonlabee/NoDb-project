@@ -1,5 +1,5 @@
 let id = 2
-let words = [
+const newNotes = [
     {
         wordid: 0,
         word:"purple"
@@ -16,24 +16,31 @@ module.exports = {
 
     //Get
     getWords:(req, res) => {
-        res.status(200).json(words)
+        res.status(200).json(words);
     },
     //Post
     postWords:(req, res) => {
-        
-
-        res.status(200).json(words)
+        const newNote = {
+            id,
+            ...req.body
+        }
+        newNotes.push(newNote);
+        id++
+        res.status(200).json(words);
     },
     //Delete
-    DeleteWords(req, res) => {
-
-    res.status(200).json(words)
+    deleteWords(req, res) => {
+        const targetIndex = newNotes.findIndex(note => note.id === +req.params.id);
+        newNotes.splice(targetIndex, 1);
+        res.status(200).json(notes);
     },
 
     //Put
     editWords(req, res) => {
-
-        res.status(200).json(words)
+        const targetIndex = newNotes.findIndex(note => note.id === +req.params.id);
+        newNotes[targetIndex].notebook = !newNotes[targetIndex].notebook;
+        res.status(200).json(newNotes);
     }
 
 }
+

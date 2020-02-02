@@ -19,13 +19,13 @@ class App extends Component {
     let { currentView } = this.state;
     return (
 
-      <section>
+      <div>
         <Header/>
         <Main />
         <Sidebar />
         <Footer />
         <button>click</button>
-      </section>
+      </div>
     );
   }
 }
