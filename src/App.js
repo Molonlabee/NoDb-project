@@ -11,12 +11,11 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      currentView: "home"
+    
     };
   }
 
   render() {
-    let { currentView } = this.state;
     return (
 
       <div>
@@ -24,7 +23,6 @@ class App extends Component {
         <Main />
         <Sidebar />
         <Footer />
-        <button>click</button>
       </div>
     );
   }

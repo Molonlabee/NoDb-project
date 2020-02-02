@@ -1,12 +1,12 @@
 let id = 2
 const newNotes = [
     {
-        wordid: 0,
-        word:"purple"
+        notesid: 0,
+        word:"page-one"
     },
     {
-        wordid:1,
-        word:"blue"
+        notesid:1,
+        word:"page-two"
     },
 ]
 
@@ -15,11 +15,11 @@ const newNotes = [
 module.exports = {
 
     //Get
-    getWords:(req, res) => {
+    getNotes:(req, res) => {
         res.status(200).json(words);
     },
     //Post
-    postWords:(req, res) => {
+    postNotes:(req, res) => {
         const newNote = {
             id,
             ...req.body
@@ -29,14 +29,14 @@ module.exports = {
         res.status(200).json(words);
     },
     //Delete
-    deleteWords(req, res) => {
+    deleteNotes(req, res) => {
         const targetIndex = newNotes.findIndex(note => note.id === +req.params.id);
         newNotes.splice(targetIndex, 1);
         res.status(200).json(notes);
     },
 
     //Put
-    editWords(req, res) => {
+    editNotes(req, res) => {
         const targetIndex = newNotes.findIndex(note => note.id === +req.params.id);
         newNotes[targetIndex].notebook = !newNotes[targetIndex].notebook;
         res.status(200).json(newNotes);
