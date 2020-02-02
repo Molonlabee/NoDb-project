@@ -6,43 +6,42 @@ class Main extends Component {
         super();
 
         this.state = {
-            newNotes:[],
-            input:""
+            newNotes: [],
+            index: ""
         };
-        this.handleAddNote = this.handleAddNote.bind(this);
+        
+        // this.handleInputChange = this.handleInputChange.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleInputChange(value) {
-        this.setState({input:value});
-    }
+    // componentDidMount() {
+  //   app.use(express.json()).then(response => {
+  //     this.setState({
+  //       newNotes: response.data
+  //     });
+  //   });
+  // }
 
-    handleAddNote() {
-        this.setState({
-            newNotes: [...this.state.newNotes, this.state.input],
-        });
+    handleInputChange(event) {
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
     }
 
     render() {
-        let newNotes = this.state.newNotes.map((element, index) => {
-            return <newNotes key ={index} task ={element}/>
-        })
         return (
-            <div className='Main'>
-               <h1>Take Your Notes</h1> 
-
-                <div>
-                    <textarea value={this.state.input}
-                    placeholder= "notes"
-                    onChange={e => this.handleInputChange(e.target.value)}/>
-                    
-                    <button onClick={this.handleAddNote}>addNote</button>
-                    <button onClick={this.handleDeleteNote}>deleteNote</button>
-                </div>
-                {newNotes}
             
+            <div onSubmit={this.handleSubmit}>
+            
+               <p>Main</p> 
+
+                <textarea rows="10" cols="200" 
+                type="text" 
+                value={this.state.value} 
+                onChange={this.handleInputChange}/>
+    
             </div>
         );
-    }
+    };
 }
 
 export default Main;

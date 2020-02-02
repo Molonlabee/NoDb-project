@@ -1,0 +1,26 @@
+section {
+    height: 95vh;
+    width: 95vw;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+app.Header {
+ 
+   
+}
+
+app.Main {
+
+    
+}
+
+app.Sidebar {
+ 
+   
+}
+
+app.footer {
+  
+}

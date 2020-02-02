@@ -11,21 +11,46 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-    
+      newNotes:[]
     };
+
+    
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  // componentDidMount() {
+  //   app.use(express.json()).then(response => {
+  //     this.setState({
+  //       newNotes: response.data
+  //     });
+  //   });
+  // }
+  
+  
+  handleSubmit(event) {
+    alert('New Note: ' + this.state.newNotes);
+    event.preventDefault();
   }
 
   render() {
     return (
 
-      <div>
-        <Header/>
+      <form onSubmit={this.handleSubmit}>
+
+        <Header />
         <Main />
         <Sidebar />
         <Footer />
-      </div>
+
+        <button>Save</button>
+        <button>Delete</button>
+        <button>Edit</button>
+  
+      </form>
     );
   }
 }
 
 export default App;
+
+////////push5///////

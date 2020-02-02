@@ -7,47 +7,42 @@ class Sidebar extends Component {
         super();
 
         this.state = {
-            words: [],
-            input: ""
+            newNotes: [],
+            index: ""
         };
-        this.handleAddTask = this.handleAddTask.bind(this);
+        
+        // this.handleInputChange = this.handleInputChange.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleInputChange(value) {
-        this.setState({ input:value });
-    }
+    // componentDidMount() {
+  //   app.use(express.json()).then(response => {
+  //     this.setState({
+  //       newNotes: response.data
+  //     });
+  //   });
+  // }
 
-    handleAddTask() {
-        this.setState ({
-            words: [...this.state.words, this.state.input],
-            input: ""
-        });
+    handleInputChange(event) {
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
     }
 
     render() {
-        let words = this.state.words.map((element,index) => {
-            return <words key ={index} task={element} />
-        })
         return (
-            <div className="Sidebar">
+            
+            <div onSubmit={this.handleSubmit}>
+            
+               <p>Sidebar</p> 
 
-               <h1>Vocabulary List</h1>
-               
-                <div>
-                    <input value={this.state.input}
-                        placeholder= "Vocabulary"
-                        onChange={e => this.handleInputChange(e.target.value)}/>
-                
-                    <button onClick={this.handleAddTask}>Add</button>
-                    <button onClick={this.handleSubTask}>Delete</button>
-                </div>
-
-                <br />
-
-                {words}
+                <textarea rows="10" cols="200" 
+                type="text" 
+                value={this.state.value} 
+                onChange={this.handleInputChange}/>
+    
             </div>
         );
-    }
+    };
 }
 
 export default Sidebar;
