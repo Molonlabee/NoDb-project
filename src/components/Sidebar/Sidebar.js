@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import './Sidebar.css';
 
-import "./Sidebar";
 
 class Sidebar extends Component {
     constructor() {
@@ -8,39 +8,40 @@ class Sidebar extends Component {
 
         this.state = {
             newNotes: [],
-            index: ""
+            value: ""
         };
         
-        // this.handleInputChange = this.handleInputChange.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
         // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    // componentDidMount() {
-  //   app.use(express.json()).then(response => {
-  //     this.setState({
-  //       newNotes: response.data
-  //     });
-  //   });
-  // }
+//     componentDidMount() {
+//     app.create(express.json()).then(response => {
+//       this.setState({
+//         newNotes: response.data
+//       });
+//     });
+//   }
 
-    handleInputChange(event) {
+    handleChange(event) {
         const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const value = target.type === 'textarea' ? target.textarea : target.value;
     }
+
 
     render() {
         return (
             
-            <div onSubmit={this.handleSubmit}>
+            <form id='p3' onSubmit={this.handleSubmit}>
             
                <p>Sidebar</p> 
 
-                <textarea rows="10" cols="200" 
+                <textarea 
                 type="text" 
                 value={this.state.value} 
-                onChange={this.handleInputChange}/>
+                onChange={this.handleChange}/>
     
-            </div>
+            </form>
         );
     };
 }

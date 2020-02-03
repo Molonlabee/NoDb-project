@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './Main.css';
 
 class Main extends Component {
     constructor() {
@@ -30,16 +30,16 @@ class Main extends Component {
     render() {
         return (
             
-            <div onSubmit={this.handleSubmit}>
-            
+            <form id='p2' onSubmit={this.handleSubmit}>
+                
                <p>Main</p> 
 
-                <textarea rows="10" cols="200" 
+                <textarea
                 type="text" 
                 value={this.state.value} 
                 onChange={this.handleInputChange}/>
     
-            </div>
+            </form>
         );
     };
 }

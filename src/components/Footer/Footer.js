@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './Footer.css';
 
 class Footer extends Component {
     constructor() {
@@ -30,16 +30,16 @@ class Footer extends Component {
     render() {
         return (
             
-            <div onSubmit={this.handleSubmit}>
+            <form id='p4' onSubmit={this.handleSubmit}>
             
                <p>Footer</p> 
 
-                <textarea rows="10" cols="200" 
+                <textarea
                 type="text" 
                 value={this.state.value} 
                 onChange={this.handleInputChange}/>
     
-            </div>
+            </form>
         );
     };
 }

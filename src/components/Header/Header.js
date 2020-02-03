@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-
+import React, { Component } from 'react';
+import './Header.css';
 
 
 class Header extends Component {
@@ -32,24 +32,23 @@ handleInputChange(event) {
   render() {
     return (
 
-      <form>
-        <p>Header</p>
+      <form id='p1'>
 
-      <div>
+        <h1>Header</h1>
 
         <input placeholder="Name" type="text" 
+                value={this.state.value} 
+                onChange={this.handleInputChange}/>
+
+
+        <input placeholder="Title" type="text" 
                 value={this.state.value} 
                 onChange={this.handleInputChange}/>
 
         <input placeholder="Date" type="text" 
                 value={this.state.value} 
                 onChange={this.handleInputChange}/>
-
-        <input placeholder="Title" type="text" 
-                value={this.state.value} 
-                onChange={this.handleInputChange}/>
-
-      </div>
+     
 
       </form>
 

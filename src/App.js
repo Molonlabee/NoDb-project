@@ -5,13 +5,15 @@ import Main from "./components/Main/Main";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Footer from "./components/Footer/Footer";
 
+
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      newNotes:[]
+      newNotes:[],
+      value: ""
     };
 
     
@@ -28,7 +30,7 @@ class App extends Component {
   
   
   handleSubmit(event) {
-    alert('New Note: ' + this.state.newNotes);
+    alert('NewNote: ' + this.state.newNotes);
     event.preventDefault();
   }
 
@@ -36,21 +38,24 @@ class App extends Component {
     return (
 
       <form onSubmit={this.handleSubmit}>
-
-        <Header />
-        <Main />
-        <Sidebar />
-        <Footer />
-
+      
+          <Header />
+          <Main/>
+          <Sidebar />
+          <Footer />
+        
+        <div>
         <button>Save</button>
         <button>Delete</button>
         <button>Edit</button>
-  
+        </div>
+        
       </form>
+  
     );
   }
 }
 
 export default App;
 
-////////push5///////
+////////push6///////

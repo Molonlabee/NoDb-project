@@ -1,26 +1,18 @@
 section {
-    height: 95vh;
-    width: 95vw;
-    
     display: flex;
     flex-direction: column;
+   align-content: flex-end;
+   background-repeat: no-repeat;
 }
 
-app.Header {
- 
-   
+textarea {
+    height: 20vh;
+    width: 20vw;
+    display: flex;
 }
 
-app.Main {
-
+/* h1 {
     
-}
+    border: 2px solid lightgray;
+} */
 
-app.Sidebar {
- 
-   
-}
-
-app.footer {
-  
-}
