@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createFactory } from 'react';
 import './Main.css';
 
 class Main extends Component {
@@ -6,7 +6,7 @@ class Main extends Component {
         super();
 
         this.state = {
-            newNotes: [],
+            savedNotes: [],
             index: ""
         };
         
@@ -15,9 +15,9 @@ class Main extends Component {
     }
 
     // componentDidMount() {
-  //   app.use(express.json()).then(response => {
+  //   app.get(express.json()).then(response => {
   //     this.setState({
-  //       newNotes: response.data
+  //       savedNotes: response.data
   //     });
   //   });
   // }
@@ -32,7 +32,7 @@ class Main extends Component {
             
             <form id='p2' onSubmit={this.handleSubmit}>
                 
-               <p>Main</p> 
+               <p>Notes</p> 
 
                 <textarea
                 type="text" 

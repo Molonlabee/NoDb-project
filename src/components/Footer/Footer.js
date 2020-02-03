@@ -6,7 +6,7 @@ class Footer extends Component {
         super();
 
         this.state = {
-            newNotes: [],
+            savedNotes: [],
             index: ""
         };
         
@@ -17,7 +17,7 @@ class Footer extends Component {
     // componentDidMount() {
   //   app.use(express.json()).then(response => {
   //     this.setState({
-  //       newNotes: response.data
+  //       savedNotes: response.data
   //     });
   //   });
   // }
@@ -32,7 +32,7 @@ class Footer extends Component {
             
             <form id='p4' onSubmit={this.handleSubmit}>
             
-               <p>Footer</p> 
+               <p>Goals</p> 
 
                 <textarea
                 type="text" 

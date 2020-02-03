@@ -12,7 +12,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      newNotes:[],
+      savedNotes:[],
       value: ""
     };
 
@@ -23,14 +23,14 @@ class App extends Component {
   // componentDidMount() {
   //   app.use(express.json()).then(response => {
   //     this.setState({
-  //       newNotes: response.data
+  //       savedNotes: response.data
   //     });
   //   });
   // }
   
   
   handleSubmit(event) {
-    alert('NewNote: ' + this.state.newNotes);
+    alert('Note: ' + this.state.savedNotes);
     event.preventDefault();
   }
 
@@ -58,4 +58,4 @@ class App extends Component {
 
 export default App;
 
-////////push6///////
+////////push7///////

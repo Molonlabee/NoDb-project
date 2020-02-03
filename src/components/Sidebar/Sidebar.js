@@ -7,7 +7,7 @@ class Sidebar extends Component {
         super();
 
         this.state = {
-            newNotes: [],
+            savedNotes: [],
             value: ""
         };
         
@@ -18,7 +18,7 @@ class Sidebar extends Component {
 //     componentDidMount() {
 //     app.create(express.json()).then(response => {
 //       this.setState({
-//         newNotes: response.data
+//         savedNotes: response.data
 //       });
 //     });
 //   }
@@ -34,7 +34,7 @@ class Sidebar extends Component {
             
             <form id='p3' onSubmit={this.handleSubmit}>
             
-               <p>Sidebar</p> 
+               <p>Vocabulary</p> 
 
                 <textarea 
                 type="text" 

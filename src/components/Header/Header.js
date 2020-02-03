@@ -7,7 +7,7 @@ class Header extends Component {
     super();
 
     this.state = {
-        newNotes: [],
+        savedNotes: [],
         index: ""
     };
     
@@ -18,7 +18,7 @@ class Header extends Component {
 // componentDidMount() {
   //   app.use(express.json()).then(response => {
   //     this.setState({
-  //       newNotes: response.data
+  //       savedNotes: response.data
   //     });
   //   });
   // }
@@ -33,8 +33,6 @@ handleInputChange(event) {
     return (
 
       <form id='p1'>
-
-        <h1>Header</h1>
 
         <input placeholder="Name" type="text" 
                 value={this.state.value} 
