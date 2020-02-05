@@ -1,15 +1,15 @@
 const express = require('express');
+const {getShows} = require('./controllers/controller');  ///exporting the funtions from notesCrtl to use short hand commands. 
 const app = express();
-const NC = require('./controllers/notesCrtl');
-
-
 app.use(express.json());
 
-app.get("/api/notes", NC.read);
-app.post("/api/notes", NC.create);
-app.delete("/api/notes", NC.delete);
-app.put("/api/notes", NC.edit);
+
+//endpoints to notesCrtl functions. Routes to take for back end request.
+app.get("/api/shows", getShows);
+// app.post("/api/notes", NcCreate);
+// app.delete("/api/notes", NcDelete);
+// app.put("/api/notes", NcEdit);
 
 const PORT = 5050;
-app.listen(PORT, () => console.log('BAT is Back ${PORT}'));
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 

@@ -1,17 +1,10 @@
-body {
-    display: flex;
-    flex-direction: column;
-   align-content: flex-end;
-   /* background-color: lightgray; */
-   
+.show-container {
+
+
+    background-color: #f4f4f4;
 }
 
-textarea {
-    height: 20vh;
-    width: 20vw;
-    display: flex;
-    background-color: transparent;
+img {
+    width: 16rem;
+    height: 20rem;
 }
-
-
-
