@@ -20,15 +20,31 @@ class App extends Component {
     axios.get('/api/shows') //requesting data array from backend with axios.get request
     .then(response => {
       this.setState({shows: response.data})
+    }) 
+  }
+
+
+  deleteShow = (id) => {
+    axios.delete(`/api/shows/${id}`)
+    .then(res =>{
+      this.setState({shows: res.data})
     })
   }
+  
 
   render() {
    const {shows} = this.state
    const mappedShows = shows.map((val,index) => {
      return (
       <div>
-        <ShowCard show={val.show} favChar={val.favChar} photoprop={val.img} quote={val.quote} />
+        <ShowCard show={val.show}
+        favChar={val.favChar} 
+        photoprop={val.img} 
+        quote={val.quote} 
+        deleteShow={this.deleteShow}
+        /> 
+        {/* the delete prop is being passed to ShowCard component, and passing its val to the button.
+        The props name can be the same as there val. */}
       </div>
      )
      
@@ -43,3 +59,5 @@ class App extends Component {
 }
 
 export default App;
+
+//Last_push_2.6.20_1am//
