@@ -97,7 +97,7 @@ let deleteShow = (req, res) => {
   //this function would look for the id that comes from the front and compare it to the id in the object and splice it 1 at a time
   const { id } = req.params;
   const deleteID = data.findIndex(val => val.id == id); 
-  data.shift(deleteID);
+  data.splice(deleteID, 1);
   res.status(200).send(data);
 };
 

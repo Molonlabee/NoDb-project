@@ -8,11 +8,12 @@ class ShowCard extends Component {
     render() {
         const {show, favChar, photoprop, quote, id} = this.props
         return (
-            <div className="container">
+            <main className="container">
                 <div className="img-box">
                     <img src={photoprop}/>  
                 </div>
-                <div className="text-box">
+                
+                <section className="text-box">
                     <h1>show: {show}</h1>
                     <h1>charter: {favChar}</h1>
                     <h1>quote: {quote}</h1>
@@ -22,8 +23,8 @@ class ShowCard extends Component {
                         <button onClick={ () => this.props.deleteShow(id)}>Delete</button>
                         <textarea />
                     </div>
-                </div>
-            </div>
+                </section>
+            </main>
         )
     }
 }

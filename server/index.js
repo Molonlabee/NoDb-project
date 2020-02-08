@@ -8,7 +8,7 @@ app.use(express.json());
 app.get("/api/shows", getShows);
 // app.post("/api/show", postShow);
 app.delete("/api/shows/:id", deleteShow); //This endpoint will remove data from data object. The id prevents others from deleting without uniqe key.  
-// app.put("/api/show", editShow);
+// app.put("/api/show/:id", editShow);
 
 
 const PORT = 5050;

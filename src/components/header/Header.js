@@ -4,11 +4,11 @@ import './Header.css'
 class Header extends Component {
     render() {
         return (
-            <div className="header">
+            <header className="header">
                 <div className="input_head">
                 <h1>What Would  <input/>  say?</h1>
                 </div>
-            </div>
+            </header>
         )
     }
 }
