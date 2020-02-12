@@ -4,6 +4,7 @@ import './components/showCard/ShowCard';
 import './App.css';
 import ShowCard from './components/showCard/ShowCard';
 import Header from './components/header/Header'
+import { response } from 'express';
 
 class App extends Component {
   constructor() {
@@ -33,10 +34,21 @@ class App extends Component {
   }
 
   //put
+  // editShow = (id) => {
+  //   axios.put('/api/show/${id}')
+  //   .then(res =>{
+  //     this.setState({shows: res.data})
+  //   })
+  // }
   
-  
-  //post
-  
+  // //post
+  // postShow = (id) => {
+  //   axios.post('/api/show')
+  //   .then(res => {
+  //     this.setState({shows: res.data})
+  //   })
+  // }
+
 
   render() {
    const {shows} = this.state
@@ -49,6 +61,8 @@ class App extends Component {
         quote={val.quote}
         id={val.id}
         deleteShow={this.deleteShow}
+        // postShow={this.deleteShow}
+        // editShow={this.editShow}
         /> 
         {/* the delete prop is being passed to ShowCard component, and passing its val to the button.
         The props name can be the same as there val. */}
