@@ -88,17 +88,17 @@ const data = [
 let getShows = (req, res) => {
   res.status(200).send(data);
 };
-//post
-// let postShow = (req, res) => {
-//   res.status(200).send(data);
-// }
+// post
+let postShow = (req, res) => {
+  res.status(200).send(data);
+}
 
-//put
-// let editShow = (req, res) => {
-//   const targetIndex = data.findIndex(show => show.id === +req.params.id);
-//   data[targetIndex].showCard = !data[targetIndex].showCard;
-//   res.status(200).send(data);
-// }
+// put
+let editShow = (req, res) => {
+  const targetIndex = data.findIndex(show => show.id === +req.params.id);
+  data[targetIndex].showCard = !data[targetIndex].showCard;
+  res.status(200).send(data);
+}
 
 //delete .this function will invoke the delete function in index.js
 let deleteShow = (req, res) => {
@@ -112,6 +112,6 @@ let deleteShow = (req, res) => {
 module.exports = {
   getShows,
   deleteShow,
-  // editShow,
-  // postShow
+  editShow,
+  postShow
 };

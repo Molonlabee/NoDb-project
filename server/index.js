@@ -7,8 +7,8 @@ app.use(express.json());
 //endpoints to shows functions. Routes to take for back end request.
 app.get("/api/shows", getShows);
 app.delete("/api/shows/:id", deleteShow); //This endpoint will remove data from data object. The id prevents others from deleting without uniqe key.  
-// app.post("/api/show", postShow);
-// app.put("/api/show/:id", editShow);
+app.post("/api/show", postShow);
+app.put("/api/show/:id", editShow);
 
 
 const PORT = 5050;

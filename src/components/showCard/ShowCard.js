@@ -18,8 +18,8 @@ class ShowCard extends Component {
                     <h1>charter: {favChar}</h1>
                     <h1>quote: {quote}</h1>
                     <div className="btn-box">
-                        {/* <button onClick={ () => this.props.postShow(id)}>Add Quote</button> */}
-                        {/* <button onClick={ () => this.props.editShow(id)}>Edit Quote</button> */}
+                        <button onClick={ () => this.props.postShow(id)}>Add Quote</button>
+                        <button onClick={ () => this.props.editShow(id)}>Edit Quote</button>
                         <button onClick={ () => this.props.deleteShow(id)}>Delete</button>
                         <textarea />
                     </div>

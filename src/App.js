@@ -33,21 +33,21 @@ class App extends Component {
     })
   }
 
-  //put
-  // editShow = (id) => {
-  //   axios.put('/api/show/${id}')
-  //   .then(res =>{
-  //     this.setState({shows: res.data})
-  //   })
-  // }
+  put
+  editShow = (id) => {
+    axios.put('/api/show/${id}')
+    .then(res =>{
+      this.setState({shows: res.data})
+    })
+  }
   
-  // //post
-  // postShow = (id) => {
-  //   axios.post('/api/show')
-  //   .then(res => {
-  //     this.setState({shows: res.data})
-  //   })
-  // }
+  //post
+  postShow = (id) => {
+    axios.post('/api/show')
+    .then(res => {
+      this.setState({shows: res.data})
+    })
+  }
 
 
   render() {
@@ -61,11 +61,11 @@ class App extends Component {
         quote={val.quote}
         id={val.id}
         deleteShow={this.deleteShow}
-        // postShow={this.deleteShow}
-        // editShow={this.editShow}
+        postShow={this.deleteShow}
+        editShow={this.editShow}
         /> 
-        {/* the delete prop is being passed to ShowCard component, and passing its val to the button.
-        The props name can be the same as there val. */}
+        the delete prop is being passed to ShowCard component, and passing its val to the button.
+        The props name can be the same as there val.
       </div>
      )
      
@@ -81,4 +81,3 @@ class App extends Component {
 
 export default App;
 
-//Last_push_2.7.20//
